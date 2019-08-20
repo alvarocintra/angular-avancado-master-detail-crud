@@ -1,6 +1,8 @@
 import { InMemoryDbService } from 'angular-in-memory-web-api';
 
 import { Category } from './pages/categories/shared/category.model';
+import { Entry } from './pages/entries/shared/entry.model';
+
 
 export class InMemoryDatabase implements InMemoryDbService {
     createDb() {
@@ -32,6 +34,69 @@ export class InMemoryDatabase implements InMemoryDbService {
             }
         ];
 
-        return { categories };
+        const entries: Entry[] = [
+            {
+                id: 1,
+                name: 'Conta de Luz',
+                description: 'Conta de luz paga todo mês',
+                categoryId: categories[1].id,
+                category: categories[1],
+                paid: true,
+                date: '14/05/2019',
+                amount: '150,00',
+                type: 'expense',
+                paidText: ''
+            } as Entry,
+            {
+                id: 2,
+                name: 'Boletos',
+                description: 'Conta de luz paga todo mês',
+                categoryId: categories[2].id,
+                category: categories[2],
+                paid: true,
+                date: '31/08/2019',
+                amount: '850,00',
+                type: 'expense',
+                paidText: ''
+            } as Entry,
+            {
+                id: 3,
+                name: 'Salário',
+                description: 'Salário recebido todo mês',
+                categoryId: categories[3].id,
+                category: categories[3],
+                paid: true,
+                date: '14/05/2019',
+                amount: '150,00',
+                type: 'revenue',
+                paidText: ''
+            } as Entry,
+            {
+                id: 4,
+                name: 'Conta de Luz',
+                description: 'Conta de luz paga todo mês',
+                categoryId: categories[1].id,
+                category: categories[1],
+                paid: true,
+                date: '14/05/2019',
+                amount: '150,00',
+                type: '',
+                paidText: ''
+            } as Entry,
+            {
+                id: 5,
+                name: 'Conta de Luz',
+                description: 'Conta de luz paga todo mês',
+                categoryId: categories[1].id,
+                category: categories[1],
+                paid: true,
+                date: '14/05/2019',
+                amount: '150,00',
+                type: '',
+                paidText: ''
+            } as Entry
+        ];
+
+        return { categories, entries };
     }
 }
