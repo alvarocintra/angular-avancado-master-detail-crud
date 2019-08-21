@@ -3,12 +3,19 @@ import { Component, OnInit } from '@angular/core';
 import { Category } from '../shared/category.model';
 import { CategoryService } from '../shared/category.service';
 
+import { faPlus } from '@fortawesome/free-solid-svg-icons';
+import { faPen } from '@fortawesome/free-solid-svg-icons';
+import { faTrashAlt } from '@fortawesome/free-solid-svg-icons';
+
 @Component({
   selector: 'app-category-list',
   templateUrl: './category-list.component.html',
   styleUrls: ['./category-list.component.css']
 })
 export class CategoryListComponent implements OnInit {
+  faPlus = faPlus;
+  faPen = faPen;
+  faTrashAlt = faTrashAlt;
 
   categories: Category[] = [];
 

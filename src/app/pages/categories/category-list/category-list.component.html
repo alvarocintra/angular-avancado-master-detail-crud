@@ -13,7 +13,7 @@
     </div>
     <div class="col-md">
         <a routerLink="new" class="btn btn-success float-right">
-            + Nova Categoria
+            <fa-icon [icon]="faPlus"></fa-icon>
         </a>
     </div>
 </div>
@@ -22,15 +22,15 @@
     <thead>
         <tr class="bg-dark text-light">
             <th>Categoria</th>
-            <th>Ações</th>
+            <th width="10%" class="text-center">Ações</th>
         </tr>
     </thead>
     <tbody>
         <tr *ngFor="let category of categories">
             <td><strong>{{category.name}}</strong><br/><small>{{category.description}}</small></td>
-            <td>
-                <a [routerLink]="[category.id, 'edit']" routerLinkActive="router-link-active"  class="btn btn-outline-info btn-sm mr-2">Editar</a>
-                <button (click)="deleteCategory(category)" routerLinkActive="router-link-active"  class="btn btn-outline-danger btn-sm">Excluir</button>
+            <td class="text-center">
+                <a [routerLink]="[category.id, 'edit']" routerLinkActive="router-link-active"  class="btn btn-outline-info btn-sm mr-2"><fa-icon [icon]="faPen"></fa-icon></a>
+                <button (click)="deleteCategory(category)" routerLinkActive="router-link-active"  class="btn btn-outline-danger btn-sm"><fa-icon [icon]="faTrashAlt"></fa-icon></button>
             </td>
         </tr>
     </tbody>
