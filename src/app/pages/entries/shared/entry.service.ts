@@ -7,11 +7,12 @@ import { map, catchError, flatMap } from 'rxjs/operators';
 import { CategoryService } from '../../categories/shared/category.service';
 
 import { Entry } from './entry.model';
+import { BaseResourceService } from 'src/app/shared/services/base-resource.service';
 
 @Injectable({
   providedIn: 'root'
 })
-export class EntryService {
+export class EntryService extends BaseResourceService<Entry> {
 
   private apiPath = 'api/entries';
 
