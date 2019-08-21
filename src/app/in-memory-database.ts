@@ -44,8 +44,7 @@ export class InMemoryDatabase implements InMemoryDbService {
                 paid: true,
                 date: '14/05/2019',
                 amount: '150,00',
-                type: 'expense',
-                paidText: ''
+                type: 'expense'
             } as Entry,
             {
                 id: 2,
@@ -53,11 +52,10 @@ export class InMemoryDatabase implements InMemoryDbService {
                 description: 'Conta de luz paga todo mês',
                 categoryId: categories[2].id,
                 category: categories[2],
-                paid: true,
+                paid: false,
                 date: '31/08/2019',
                 amount: '850,00',
-                type: 'expense',
-                paidText: ''
+                type: 'expense'
             } as Entry,
             {
                 id: 3,
@@ -68,20 +66,18 @@ export class InMemoryDatabase implements InMemoryDbService {
                 paid: true,
                 date: '14/05/2019',
                 amount: '150,00',
-                type: 'revenue',
-                paidText: ''
+                type: 'revenue'
             } as Entry,
             {
                 id: 4,
-                name: 'Conta de Luz',
-                description: 'Conta de luz paga todo mês',
+                name: 'Freelas',
+                description: 'Trabalho por fora',
                 categoryId: categories[1].id,
                 category: categories[1],
-                paid: true,
+                paid: false,
                 date: '14/05/2019',
                 amount: '150,00',
-                type: '',
-                paidText: ''
+                type: 'revenue'
             } as Entry,
             {
                 id: 5,
@@ -92,8 +88,7 @@ export class InMemoryDatabase implements InMemoryDbService {
                 paid: true,
                 date: '14/05/2019',
                 amount: '150,00',
-                type: '',
-                paidText: ''
+                type: 'expense'
             } as Entry
         ];
 

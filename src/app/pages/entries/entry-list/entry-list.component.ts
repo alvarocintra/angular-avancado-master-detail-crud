@@ -3,12 +3,21 @@ import { Component, OnInit } from '@angular/core';
 import { Entry } from '../shared/entry.model';
 import { EntryService } from '../shared/entry.service';
 
+import { faPen } from '@fortawesome/free-solid-svg-icons';
+import { faTrash } from '@fortawesome/free-solid-svg-icons';
+import { faPlus } from '@fortawesome/free-solid-svg-icons';
+
 @Component({
   selector: 'app-entry-list',
   templateUrl: './entry-list.component.html',
   styleUrls: ['./entry-list.component.css']
 })
 export class EntryListComponent implements OnInit {
+  // Icons
+  faPen = faPen;
+  faTrash = faTrash;
+  faPlus = faPlus;
+  //
 
   entries: Entry[] = [];
 
@@ -17,7 +26,7 @@ export class EntryListComponent implements OnInit {
   ngOnInit() {
     this.entryService.getAll().subscribe(
       entries => this.entries = entries,
-      error => alert('Erro ao carregar a lista')
+      error => alert('Erro ao carregar a lista: ' + error)
     );
   }
 
