@@ -3,6 +3,7 @@ import { Component, OnInit } from '@angular/core';
 import { Category } from '../shared/category.model';
 import { CategoryService } from '../shared/category.service';
 
+// ICONS
 import { faPlus } from '@fortawesome/free-solid-svg-icons';
 import { faPen } from '@fortawesome/free-solid-svg-icons';
 import { faTrashAlt } from '@fortawesome/free-solid-svg-icons';

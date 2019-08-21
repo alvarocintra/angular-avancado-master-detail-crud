@@ -9,12 +9,16 @@ import { switchMap } from 'rxjs/operators';
 
 import toastr from 'toastr';
 
+// ICONS
+import { faArrowLeft } from '@fortawesome/free-solid-svg-icons';
+
 @Component({
   selector: 'app-category-form',
   templateUrl: './category-form.component.html',
   styleUrls: ['./category-form.component.css']
 })
 export class CategoryFormComponent implements OnInit, AfterContentChecked {
+  faArrowLeft = faArrowLeft;
 
   currentAction: string;
   categoryForm: FormGroup;
