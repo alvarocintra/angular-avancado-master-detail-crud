@@ -87,9 +87,9 @@ export class EntryFormComponent implements OnInit, AfterContentChecked {
         return {
           text,
           value
-        }
+        };
       }
-    )
+    );
   }
 
   // PRIVATE METHODS
