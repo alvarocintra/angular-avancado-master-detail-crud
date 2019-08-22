@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { BaseResourceListComponent } from 'src/app/shared/components/base-resource-list/base-resource-list.component';
 
 import { Entry } from '../shared/entry.model';
 import { EntryService } from '../shared/entry.service';
@@ -6,7 +7,6 @@ import { EntryService } from '../shared/entry.service';
 import { faPen } from '@fortawesome/free-solid-svg-icons';
 import { faTrash } from '@fortawesome/free-solid-svg-icons';
 import { faPlus } from '@fortawesome/free-solid-svg-icons';
-import { BaseResourceListComponent } from 'src/app/shared/components/base-resource-list/base-resource-list.component';
 
 @Component({
   selector: 'app-entry-list',
