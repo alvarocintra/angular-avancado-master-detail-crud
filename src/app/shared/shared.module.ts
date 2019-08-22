@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { ReactiveFormsModule } from '@angular/forms';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { BreadCrumbComponent } from './components/bread-crumb/bread-crumb.component';
+import { RouterModule } from '@angular/router';
 
 
 @NgModule({
@@ -12,6 +13,7 @@ import { BreadCrumbComponent } from './components/bread-crumb/bread-crumb.compon
   imports: [
     CommonModule,
     ReactiveFormsModule,
+    RouterModule,
     FontAwesomeModule
   ],
   exports: [
@@ -19,6 +21,7 @@ import { BreadCrumbComponent } from './components/bread-crumb/bread-crumb.compon
     CommonModule,
     ReactiveFormsModule,
     FontAwesomeModule,
+    RouterModule,
 
     // shared components
     BreadCrumbComponent
