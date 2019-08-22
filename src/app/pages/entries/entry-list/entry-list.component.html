@@ -28,7 +28,7 @@
         </tr>
     </thead>
     <tbody>
-        <tr *ngFor="let entry of entries">
+        <tr *ngFor="let entry of resources">
             <td><strong>{{entry.name}}</strong><br/><small class="text-success">{{entry.date}}</small><br/><small *ngIf="entry.description">{{entry.description}}</small></td>
             <td>{{entry.category.name}}</td>
             <td class="text-right">
@@ -40,7 +40,7 @@
             </td>
             <td class="text-center">
                 <a [routerLink]="[entry.id, 'edit']" routerLinkActive="router-link-active"  class="btn btn-outline-info btn-sm mr-2"><fa-icon [icon]="faPen"></fa-icon></a>
-                <button (click)="deleteEntry(entry)" routerLinkActive="router-link-active"  class="btn btn-outline-danger btn-sm"><fa-icon [icon]="faTrash"></fa-icon></button>
+                <button (click)="deleteResource(entry)" routerLinkActive="router-link-active"  class="btn btn-outline-danger btn-sm"><fa-icon [icon]="faTrash"></fa-icon></button>
             </td>
         </tr>
     </tbody>

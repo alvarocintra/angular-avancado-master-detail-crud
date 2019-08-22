@@ -20,8 +20,6 @@ export class EntryListComponent extends BaseResourceListComponent<Entry> {
   faPlus = faPlus;
   //
 
-  entries: Entry[] = [];
-
   constructor(private entryService: EntryService) {
     super(entryService);
   }
