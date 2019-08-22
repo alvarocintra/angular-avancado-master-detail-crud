@@ -11,13 +11,14 @@ import toastr from 'toastr';
 
 // ICONS
 import { faArrowLeft } from '@fortawesome/free-solid-svg-icons';
+import { BaseResourceFormComponent } from 'src/app/shared/components/base-resource-form/base-resource-form.component';
 
 @Component({
   selector: 'app-category-form',
   templateUrl: './category-form.component.html',
   styleUrls: ['./category-form.component.css']
 })
-export class CategoryFormComponent implements OnInit, AfterContentChecked {
+export class CategoryFormComponent extends BaseResourceFormComponent<Category> implements OnInit, AfterContentChecked {
   faArrowLeft = faArrowLeft;
 
   currentAction: string;
@@ -63,7 +64,7 @@ export class CategoryFormComponent implements OnInit, AfterContentChecked {
     }
   }
 
-  private buildCategoryForm() {
+  protected buildResourceForm() {
     this.categoryForm = this.formBuilder.group({
       id: [null],
       name: [null, [Validators.required, Validators.minLength(2)]],
