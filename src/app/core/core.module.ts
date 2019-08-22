@@ -23,7 +23,8 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
   exports: [
     BrowserModule,
     BrowserAnimationsModule,
-    HttpClientModule
+    HttpClientModule,
+    FontAwesomeModule
   ]
 })
 export class CoreModule { }

@@ -1,33 +1,26 @@
-import { Component, OnInit, AfterContentChecked } from '@angular/core';
-import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
-import { ActivatedRoute, Router } from '@angular/router';
+import { Component, OnInit } from '@angular/core';
+import { BaseResourceFormComponent } from 'src/app/shared/components/base-resource-form/base-resource-form.component';
+
+import { Validators } from '@angular/forms';
 
 import { Entry } from '../shared/entry.model';
 import { EntryService } from '../shared/entry.service';
 
-import { switchMap } from 'rxjs/operators';
-
-import toastr from 'toastr';
+import { Category } from '../../categories/shared/category.model';
+import { CategoryService } from '../../categories/shared/category.service';
 
 import { faArrowLeft } from '@fortawesome/free-solid-svg-icons';
 import { faMoneyBillAlt } from '@fortawesome/free-solid-svg-icons';
-import { Category } from '../../categories/shared/category.model';
-import { CategoryService } from '../../categories/shared/category.service';
 
 @Component({
   selector: 'app-entry-form',
   templateUrl: './entry-form.component.html',
   styleUrls: ['./entry-form.component.css']
 })
-export class EntryFormComponent implements OnInit, AfterContentChecked {
+export class EntryFormComponent extends BaseResourceFormComponent<Entry> implements OnInit {
   faArrowLeft = faArrowLeft;
   faMoneyBillAlt = faMoneyBillAlt;
 
-  currentAction: string;
-  entryForm: FormGroup;
-  pageTitle: string;
-  serverErrorMessages: string[] = null;
-  submittingForm = false;
   entry: Entry = new Entry();
   categories: Array<Category>;
 
