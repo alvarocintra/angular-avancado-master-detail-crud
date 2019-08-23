@@ -1,14 +1,6 @@
 <app-bread-crumb
     [items]="[{text: 'Categorias', link: '/categories'}, {text: pageTitle}]"
 ></app-bread-crumb>
-
-<div class="alert alert-danger" *ngIf="serverErrorMessages">
-    <strong>Erro no servidor:</strong>
-    <ul>
-        <li *ngFor="let error of serverErrorMessages">{{error}}</li>
-    </ul>
-</div>
-
 <app-page-header
     [page-title]="pageTitle"
     button-text="Voltar"
@@ -17,7 +9,7 @@
     button-class="btn-light"
 >
 </app-page-header>
-
+<app-server-error-messages [server-error-messages]="serverErrorMessages"></app-server-error-messages>
 <form [formGroup]="resourceForm" (submit)="submitForm()">
     <div class="card">
         <div class="card-header">
