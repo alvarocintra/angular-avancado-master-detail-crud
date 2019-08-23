@@ -42,8 +42,8 @@ export class InMemoryDatabase implements InMemoryDbService {
                 categoryId: categories[1].id,
                 category: categories[1],
                 paid: true,
-                date: '14/05/2019',
-                amount: '150,00',
+                date: '23/05/2019',
+                amount: '1050,00',
                 type: 'expense'
             } as Entry,
             {
@@ -53,7 +53,7 @@ export class InMemoryDatabase implements InMemoryDbService {
                 categoryId: categories[2].id,
                 category: categories[2],
                 paid: false,
-                date: '31/08/2019',
+                date: '14/05/2019',
                 amount: '850,00',
                 type: 'expense'
             } as Entry,
@@ -65,29 +65,40 @@ export class InMemoryDatabase implements InMemoryDbService {
                 category: categories[3],
                 paid: true,
                 date: '14/05/2019',
-                amount: '150,00',
+                amount: '2500,00',
                 type: 'revenue'
             } as Entry,
             {
                 id: 4,
                 name: 'Freelas',
                 description: 'Trabalho por fora',
-                categoryId: categories[1].id,
-                category: categories[1],
+                categoryId: categories[4].id,
+                category: categories[4],
                 paid: false,
-                date: '14/05/2019',
+                date: '03/05/2019',
                 amount: '150,00',
                 type: 'revenue'
             } as Entry,
             {
                 id: 5,
-                name: 'Conta de Luz',
-                description: 'Conta de luz paga todo mês',
+                name: 'Cinema',
+                description: 'Filme assistido',
+                categoryId: categories[0].id,
+                category: categories[0],
+                paid: true,
+                date: '28/05/2019',
+                amount: '150,00',
+                type: 'expense'
+            } as Entry,
+            {
+                id: 6,
+                name: 'Conta de Água',
+                description: 'Conta de água paga todo mês',
                 categoryId: categories[1].id,
                 category: categories[1],
                 paid: true,
-                date: '14/05/2019',
-                amount: '150,00',
+                date: '22/05/2019',
+                amount: '80,00',
                 type: 'expense'
             } as Entry
         ];
