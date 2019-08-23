@@ -9,6 +9,8 @@ import { faPen } from '@fortawesome/free-solid-svg-icons';
 import { faTrashAlt } from '@fortawesome/free-solid-svg-icons';
 import { BaseResourceListComponent } from 'src/app/shared/components/base-resource-list/base-resource-list.component';
 
+import { NgxSpinnerService } from 'ngx-spinner';
+
 @Component({
   selector: 'app-category-list',
   templateUrl: './category-list.component.html',
@@ -19,8 +21,8 @@ export class CategoryListComponent extends BaseResourceListComponent<Category> {
   faPen = faPen;
   faTrashAlt = faTrashAlt;
 
-  constructor(private categoryService: CategoryService) {
-    super(categoryService);
+  constructor(private categoryService: CategoryService, protected spinner: NgxSpinnerService) {
+    super(categoryService, spinner);
   }
 
 }

@@ -7,7 +7,7 @@ import { RouterModule } from '@angular/router';
 import { PageHeaderComponent } from './components/page-header/page-header.component';
 import { FormFieldErrorComponent } from './components/form-field-error/form-field-error.component';
 import { ServerErrorMessagesComponent } from './components/server-error-messages/server-error-messages.component';
-
+import { NgxSpinnerModule } from 'ngx-spinner';
 
 @NgModule({
   declarations: [
@@ -20,7 +20,8 @@ import { ServerErrorMessagesComponent } from './components/server-error-messages
     CommonModule,
     ReactiveFormsModule,
     RouterModule,
-    FontAwesomeModule
+    FontAwesomeModule,
+    NgxSpinnerModule
   ],
   exports: [
     // shared modules
@@ -28,6 +29,7 @@ import { ServerErrorMessagesComponent } from './components/server-error-messages
     ReactiveFormsModule,
     RouterModule,
     FontAwesomeModule,
+    NgxSpinnerModule,
 
     // shared components
     BreadCrumbComponent,

@@ -8,6 +8,8 @@ import { faPen } from '@fortawesome/free-solid-svg-icons';
 import { faTrash } from '@fortawesome/free-solid-svg-icons';
 import { faPlus } from '@fortawesome/free-solid-svg-icons';
 
+import { NgxSpinnerService } from 'ngx-spinner';
+
 @Component({
   selector: 'app-entry-list',
   templateUrl: './entry-list.component.html',
@@ -20,7 +22,7 @@ export class EntryListComponent extends BaseResourceListComponent<Entry> {
   faPlus = faPlus;
   //
 
-  constructor(private entryService: EntryService) {
-    super(entryService);
+  constructor(private entryService: EntryService, protected spinner: NgxSpinnerService) {
+    super(entryService, spinner);
   }
 }
