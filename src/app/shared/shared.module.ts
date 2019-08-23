@@ -26,8 +26,8 @@ import { ServerErrorMessagesComponent } from './components/server-error-messages
     // shared modules
     CommonModule,
     ReactiveFormsModule,
-    FontAwesomeModule,
     RouterModule,
+    FontAwesomeModule,
 
     // shared components
     BreadCrumbComponent,
