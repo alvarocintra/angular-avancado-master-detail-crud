@@ -29,7 +29,7 @@
     "currency-formatter": "^1.5.5",
     "font-awesome": "^4.7.0",
     "jquery": "^3.4.1",
-    "moment": "^2.24.0",
+    "moment": "^2.29.4",
     "ngx-icons": "^0.3.0",
     "ngx-spinner": "^8.0.3",
     "primeicons": "^2.0.0",
